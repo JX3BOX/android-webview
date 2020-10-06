@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <script src="https://oss.jx3box.com/static/jx3box-lib/vue.js?v=0.1.9"></script>
+        <script src="https://oss.jx3box.com/static/jx3box-editor/jx3box_article.umd.min.js?v=0.1.9"></script>
+        <link
+            rel="stylesheet"
+            href="https://oss.jx3box.com/static/jx3box-editor/jx3box_article.css?v=0.1.9"/>
+    </head>
+    <body>
+        <div id="app">
+            <jx3box_article id="article" content="loading..">
+            <h4><span style="font-size: 18px;">写在前面</span></h4> <ul> <li><span style="font-size: 18px;">这套没什么特殊秘籍需求，<span style="color: #ff0000;">不需要上将减伤</span>【<span style="text-decoration: underline; background-color: #ff0000; color: #ffff00;">不需要不等于不能带，实际打本减伤还是很香的</span>】，<span style="color: #ff0000;">回气秘籍不用多说，自然要点</span></span></li> <li><span style="font-size: 18px;">之所以搞这么多宏是因为嫌切体态麻烦，这些宏用顺手以后很舒服</span></li> <li><span style="font-size: 18px;">走位的时候用<span style="color: #ff0000;">走位宏断刀以后</span>可以<span style="color: #ff0000;">切鞘刀按鞘刀（雪絮金屏）宏</span>一直读刀削直到上将CD转好，<span style="color: #ff0000;">或者用群攻宏</span>打破釜和项王<span style="color: #ff0000;">直到拍出上将以后回归大刀（秀明尘身）宏</span></span></li> <li><span style="font-size: 18px;"><span style="color: #ff0000;">空上将的时候也可以继续按宏</span>，会自动切鞘刀（雪絮金屏） 一直读刀削直到上将CD转好，<span style="color: #ff0000;">或者用群攻宏</span>打破釜和项王<span style="color: #ff0000;">直到拍出上将以后回归大刀（秀明尘身）宏 </span></span></li> <li><span style="font-size: 18px;">宏就是宏，肯定不能和手动比，很多时候突发的情况单一的宏是无法处理的</span></li> </ul> <h4><span style="font-size: 18px;">使用说明</span></h4> <ul> <li><span style="font-size: 18px; color: #ff0000;">双刀（松烟竹雾）宏，鞘刀（雪絮金屏）宏，大刀（秀明尘身）宏放对应体态技能栏的同一个键位上 ，群攻宏同理，其他宏所有体态都能放，也是放同一个键位；</span></li> <li><span style="font-size: 18px; color: #ff0000;">手动切换到松烟竹雾体态​【双刀】起手，然后无脑按宏​&nbsp;</span></li> </ul> <h4><span style="font-size: 18px;">极限输出</span></h4> <ul> <li><span style="font-size: 18px;">贴一套<span style="color: #ff0000;">极限输出宏</span>，但是实战需要自行控制回气，自行修正各种情况（<span style="color: #ff0000;">新手友好度差一些</span>）</span></li> </ul> <pre class="e-jx3macro-area w-jx3macro">[松烟竹雾] 体态 /cast [tnobuff:闹须弥] 闹须弥 /fcast 碎江天 /cast [sun&gt;20] 秀明尘身 /cast [sun&lt;19|rage&lt;5] 擒龙六斩</pre> <pre class="e-jx3macro-area w-jx3macro">[雪絮金屏] 体态 /cast 坚壁清野 /cast [bufftime:命中标记&lt;1|nobuff:命中标记|sun&lt;20] 秀明尘身 /cast 刀啸风吟</pre> <pre class="e-jx3macro-area w-jx3macro">[秀明尘身] 体态 /cast 雷走风切 /cast 上将军印 /cast [bufftime:尘身&lt;1] 停止释放 /cast [bufftime:命中标记&gt;2] 雪絮金屏 /cast [bufftime:尘身&gt;2.3] 虹气长空 /cast [sun&lt;20]龙骧虎步</pre> <ul> <li>雪絮金屏体态三刀啸填充。三刀啸的填充在木桩的表现上会相对逊色于二刀啸加破釜填充，甚至会延后上将，导致同样时间的上将数减少，但是打BOSS时由于BOSS血条下降，刀啸伤害会有较大提升，实际DPS反而更高一些（理论依据可以参考贴吧大佬<a href="https://tieba.baidu.com/p/6842007692?pid=133671529210&amp;cid=#133671529210">https://tieba.baidu.com/p/6842007692?pid=133671529210&amp;cid=#133671529210</a>）</li> <li>并且二刀啸+破釜的填充因为破釜没有奇穴和秘技在续航方面的修饰，在续航上的表现甚至比三刀啸更加差劲，光按宏的话会因为经常踢龙骧导致DPS拉胯，持续输出能力较差，就三分钟站桩而言输出甚至不会比二刀啸无填充高</li> <li>再放一个回气宏</li> </ul> <pre class="e-jx3macro-area w-jx3macro">[回气宏] /cast [bufftime:尘身&lt;1] 停止释放 /cast 松烟竹雾 /cast 控鹤式 /cast 逐鹰式 /cast 擒龙六斩 /cast 龙骧虎步</pre>
+            </jx3box_article>
+        </div>
+        <script>
+            var username = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjI0OTIyLCJncm91cCI6MzIsIm5hbWUiOiLkuZ3muIoiLCJzdGF0dXMiOjAsImlhdCI6MTYwMTk5MDkzOCwiZXhwIjoxNjA0NTgyOTM4fQ.c8UkrIOA77pYAQF3FiMJlEUghyi-ke515GAXHWUtfPM"; //使用正确的token
+            var password = "android"; //安卓端使用
+            var headers = new Headers();
+            headers.set("Authorization", "Basic " + btoa(username + ":" + password));
+            // 1.异步加载设置数据，将420改成正确的文章ID
+            fetch("https://server.jx3box.com/post/find?id=17984", {
+                method: "GET",
+                headers: headers,
+                credentials: "include",
+                mode: "cors",
+            }).then((res) => {
+                res.json().then((data) => {
+                    let content = data && data.data && data.data.post.post_content;
+                    document.getElementById("article").setAttribute("content", content);
+                    // 2.实例化
+                    new Vue({
+                        components: {
+                            jx3box_article,
+                        },
+                    }).$mount("#app");
+                });
+            });
+        </script>
+    </body>
+</html>
