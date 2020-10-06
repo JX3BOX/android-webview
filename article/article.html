@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
     <head>
-        <script src="https://oss.jx3box.com/static/jx3box-lib/vue.js?v=0.1.9"></script>
+        <script src="https://oss.jx3box.com/static/jx3box-lib/vue.js"></script>
         <script src="https://oss.jx3box.com/static/jx3box-editor/jx3box_article.umd.min.js?v=0.1.9"></script>
         <link
             rel="stylesheet"
-            href="https://oss.jx3box.com/static/jx3box-editor/jx3box_article.css?v=0.1.9"/>
+            href="https://oss.jx3box.com/static/jx3box-editor/jx3box_article.css?v=0.1.9"
+        />
     </head>
     <body>
         <div id="app">
@@ -16,18 +17,18 @@
             //var password = "android"; //安卓端使用
             //var headers = new Headers();
             //headers.set("Authorization", "Basic " + btoa(username + ":" + password));
-            
+
             // 1.查询参数
             let params = new URLSearchParams(location.search);
-            let id = params.get('id') || '0'
-            let type = params.get('type') || 'cms'
-            
+            let id = params.get("id") || "0";
+            let type = params.get("type") || "cms";
+
             // 2.接口map
             const API_MAP = {
-                cms : "https://server.jx3box.com/post/find"
-            }
-            let api = API_MAP[type]
-            
+                cms: "https://server.jx3box.com/post/find",
+            };
+            let api = API_MAP[type];
+
             // 3.请求数据
             fetch(`${api}?id=${id}`, {
                 method: "GET",
@@ -35,23 +36,27 @@
                 credentials: "include",
                 mode: "cors",
             }).then((res) => {
+
                 res.json().then((data) => {
-                    
                     // 4.数据包
-                    let content = ''
-                    if(type == 'cms'){
-                        content = data && data.data && data.data.post.post_content;
+                    let content = "";
+                    if (type == "cms") {
+                        content =
+                            data && data.data && data.data.post.post_content;
                     }
-                    
+
                     // 5.传入组件
-                    document.getElementById("article").setAttribute("content", content);
-                    
+                    document
+                        .getElementById("article")
+                        .setAttribute("content", content);
+
                     // 6.实例化组件
                     new Vue({
                         components: {
                             jx3box_article,
                         },
                     }).$mount("#app");
+                    
                 });
             });
         </script>
